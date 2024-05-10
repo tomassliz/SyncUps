@@ -18,6 +18,7 @@
 		7CFB47162BEE57DD00F53B99 /* Tagged in Frameworks */ = {isa = PBXBuildFile; productRef = 7CFB47152BEE57DD00F53B99 /* Tagged */; };
 		7CFB47182BEE5A6700F53B99 /* SyncUpsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB47172BEE5A6700F53B99 /* SyncUpsList.swift */; };
 		7CFB471C2BEE673B00F53B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB471B2BEE673B00F53B99 /* Assets.xcassets */; };
+		7CFB471E2BEE6E8700F53B99 /* SyncUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB471D2BEE6E8700F53B99 /* SyncUpForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		7CFB47122BEE52C500F53B99 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		7CFB47172BEE5A6700F53B99 /* SyncUpsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncUpsList.swift; sourceTree = "<group>"; };
 		7CFB471B2BEE673B00F53B99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CFB471D2BEE6E8700F53B99 /* SyncUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncUpForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				7CFB46E72BEE45AB00F53B99 /* ContentView.swift */,
 				7CFB47122BEE52C500F53B99 /* Models.swift */,
+				7CFB471D2BEE6E8700F53B99 /* SyncUpForm.swift */,
 				7CFB46E52BEE45AB00F53B99 /* SyncUpsApp.swift */,
 				7CFB47172BEE5A6700F53B99 /* SyncUpsList.swift */,
 				7CFB471B2BEE673B00F53B99 /* Assets.xcassets */,
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CFB47132BEE52C500F53B99 /* Models.swift in Sources */,
+				7CFB471E2BEE6E8700F53B99 /* SyncUpForm.swift in Sources */,
 				7CFB47182BEE5A6700F53B99 /* SyncUpsList.swift in Sources */,
 				7CFB46E82BEE45AB00F53B99 /* ContentView.swift in Sources */,
 				7CFB46E62BEE45AB00F53B99 /* SyncUpsApp.swift in Sources */,
