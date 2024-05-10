@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7CFB46E62BEE45AB00F53B99 /* SyncUpsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB46E52BEE45AB00F53B99 /* SyncUpsApp.swift */; };
 		7CFB46E82BEE45AB00F53B99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB46E72BEE45AB00F53B99 /* ContentView.swift */; };
-		7CFB46EA2BEE45AD00F53B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB46E92BEE45AD00F53B99 /* Assets.xcassets */; };
 		7CFB46ED2BEE45AD00F53B99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB46EC2BEE45AD00F53B99 /* Preview Assets.xcassets */; };
 		7CFB46F72BEE45AD00F53B99 /* SyncUpsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB46F62BEE45AD00F53B99 /* SyncUpsTests.swift */; };
 		7CFB47012BEE45AD00F53B99 /* SyncUpsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB47002BEE45AD00F53B99 /* SyncUpsUITests.swift */; };
@@ -17,6 +16,7 @@
 		7CFB47112BEE514200F53B99 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 7CFB47102BEE514200F53B99 /* ComposableArchitecture */; };
 		7CFB47132BEE52C500F53B99 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB47122BEE52C500F53B99 /* Models.swift */; };
 		7CFB47162BEE57DD00F53B99 /* Tagged in Frameworks */ = {isa = PBXBuildFile; productRef = 7CFB47152BEE57DD00F53B99 /* Tagged */; };
+		7CFB471C2BEE673B00F53B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB471B2BEE673B00F53B99 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		7CFB46E22BEE45AB00F53B99 /* SyncUps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SyncUps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFB46E52BEE45AB00F53B99 /* SyncUpsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncUpsApp.swift; sourceTree = "<group>"; };
 		7CFB46E72BEE45AB00F53B99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7CFB46E92BEE45AD00F53B99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CFB46EC2BEE45AD00F53B99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7CFB46F22BEE45AD00F53B99 /* SyncUpsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyncUpsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFB46F62BEE45AD00F53B99 /* SyncUpsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncUpsTests.swift; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		7CFB47002BEE45AD00F53B99 /* SyncUpsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncUpsUITests.swift; sourceTree = "<group>"; };
 		7CFB47022BEE45AD00F53B99 /* SyncUpsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncUpsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7CFB47122BEE52C500F53B99 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		7CFB471B2BEE673B00F53B99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +100,11 @@
 		7CFB46E42BEE45AB00F53B99 /* SyncUps */ = {
 			isa = PBXGroup;
 			children = (
-				7CFB46E52BEE45AB00F53B99 /* SyncUpsApp.swift */,
 				7CFB46E72BEE45AB00F53B99 /* ContentView.swift */,
-				7CFB46E92BEE45AD00F53B99 /* Assets.xcassets */,
-				7CFB46EB2BEE45AD00F53B99 /* Preview Content */,
 				7CFB47122BEE52C500F53B99 /* Models.swift */,
+				7CFB46E52BEE45AB00F53B99 /* SyncUpsApp.swift */,
+				7CFB471B2BEE673B00F53B99 /* Assets.xcassets */,
+				7CFB46EB2BEE45AD00F53B99 /* Preview Content */,
 			);
 			path = SyncUps;
 			sourceTree = "<group>";
@@ -246,8 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CFB471C2BEE673B00F53B99 /* Assets.xcassets in Resources */,
 				7CFB46ED2BEE45AD00F53B99 /* Preview Assets.xcassets in Resources */,
-				7CFB46EA2BEE45AD00F53B99 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
