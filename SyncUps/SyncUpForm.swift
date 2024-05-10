@@ -5,7 +5,13 @@ import SwiftUI
 struct SyncUpForm {
   @ObservableState
   struct State: Equatable {
+    var focus: Field? = .title
     var syncUp: SyncUp
+
+    enum Field: Hashable {
+      case attendee(Attendee.ID)
+      case title
+    }
   }
   enum Action: BindableAction {
     case addAttendeeButtonTapped
@@ -18,21 +24,31 @@ struct SyncUpForm {
     Reduce { state, action in
       switch action {
       case .addAttendeeButtonTapped:
-        state.syncUp.attendees.append(
-          Attendee(id: Attendee.ID())
-        )
+        let attendee = Attendee(id: Attendee.ID())
+        state.syncUp.attendees.append(attendee)
+        state.focus = .attendee(attendee.id)
         return .none
 
       case .binding:
         return .none
 
       case let .onDeleteAttendees(indexSet):
+        guard let firstDeletedIndex = indexSet.first
+        else { return .none }
+        let firstDeletedAttendee = state.syncUp.attendees[firstDeletedIndex]
+
         state.syncUp.attendees.remove(atOffsets: indexSet)
         if state.syncUp.attendees.isEmpty {
           state.syncUp.attendees.append(
             Attendee(id: Attendee.ID())
           )
         }
+
+        guard state.focus == .attendee(firstDeletedAttendee.id)
+        else { return .none }
+        let index = min(firstDeletedIndex, state.syncUp.attendees.count - 1)
+        state.focus = .attendee(state.syncUp.attendees[index].id)
+
         return .none
       }
     }
@@ -41,19 +57,13 @@ struct SyncUpForm {
 
 struct SyncUpFormView: View {
   @Bindable var store: StoreOf<SyncUpForm>
-  @FocusState var focus: Field?
-
-  enum Field: Hashable {
-    case attendee(Attendee.ID)
-    case title
-  }
+  @FocusState var focus: SyncUpForm.State.Field?
 
   var body: some View {
     Form {
       Section {
         TextField("Title", text: $store.syncUp.title)
           .focused($focus, equals: .title)
-          .onAppear { focus = .title }
         HStack {
           Slider(value: $store.syncUp.duration.minutes, in: 5...30, step: 1) {
             Text("Length")
@@ -71,22 +81,17 @@ struct SyncUpFormView: View {
             .focused($focus, equals: .attendee(attendee.id))
         }
         .onDelete { indices in
-          guard let firstDeletedIndex = indices.first else { return }
-          let firstDeletedAttendee = store.syncUp.attendees[firstDeletedIndex]
           store.send(.onDeleteAttendees(indices))
-          guard focus == .attendee(firstDeletedAttendee.id) else { return }
-          let index = min(firstDeletedIndex, store.syncUp.attendees.count - 1)
-          focus = .attendee(store.syncUp.attendees[index].id)
         }
 
         Button("New attendee") {
           store.send(.addAttendeeButtonTapped)
-          focus = .attendee(store.syncUp.attendees.last!.id)
         }
       } header: {
         Text("Attendees")
       }
     }
+    .bind($store.focus, to: $focus)
   }
 }
 
