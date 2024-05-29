@@ -1,17 +1,18 @@
-//
-//  SyncUpsApp.swift
-//  SyncUps
-//
-//  Created by Tomas Sliz on 10.05.2024.
-//
-
+import ComposableArchitecture
 import SwiftUI
 
 @main
 struct SyncUpsApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  @MainActor
+  static let store = Store(initialState: SyncUpsList.State()) {
+    SyncUpsList()
+  }
+
+  var body: some Scene {
+    WindowGroup {
+      NavigationStack {
+        SyncUpsListView(store: Self.store)
+      }
     }
+  }
 }

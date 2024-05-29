@@ -6,7 +6,7 @@ struct SyncUpsList {
   @ObservableState
   struct State: Equatable {
     @Presents var addSyncUp: SyncUpForm.State?
-    var syncUps: IdentifiedArrayOf<SyncUp> = []
+    @Shared(.fileStorage(.syncUps)) var syncUps: IdentifiedArrayOf<SyncUp> = []
   }
 
   enum Action {
@@ -55,6 +55,10 @@ struct SyncUpsList {
       SyncUpForm()
     }
   }
+}
+
+extension URL {
+  static let syncUps = Self.documentsDirectory.appending(component: "sync-ups.json")
 }
 
 struct SyncUpsListView: View {

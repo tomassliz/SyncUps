@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7CB7C4A62BF012C7008A07FA /* SyncUpFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB7C4A52BF012C7008A07FA /* SyncUpFormTests.swift */; };
 		7CFB46E62BEE45AB00F53B99 /* SyncUpsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB46E52BEE45AB00F53B99 /* SyncUpsApp.swift */; };
-		7CFB46E82BEE45AB00F53B99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB46E72BEE45AB00F53B99 /* ContentView.swift */; };
 		7CFB46ED2BEE45AD00F53B99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB46EC2BEE45AD00F53B99 /* Preview Assets.xcassets */; };
 		7CFB46F72BEE45AD00F53B99 /* SyncUpsListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB46F62BEE45AD00F53B99 /* SyncUpsListTests.swift */; };
 		7CFB47012BEE45AD00F53B99 /* SyncUpsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB47002BEE45AD00F53B99 /* SyncUpsUITests.swift */; };
@@ -43,7 +42,6 @@
 		7CB7C4A52BF012C7008A07FA /* SyncUpFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncUpFormTests.swift; sourceTree = "<group>"; };
 		7CFB46E22BEE45AB00F53B99 /* SyncUps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SyncUps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFB46E52BEE45AB00F53B99 /* SyncUpsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncUpsApp.swift; sourceTree = "<group>"; };
-		7CFB46E72BEE45AB00F53B99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7CFB46EC2BEE45AD00F53B99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7CFB46F22BEE45AD00F53B99 /* SyncUpsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyncUpsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFB46F62BEE45AD00F53B99 /* SyncUpsListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncUpsListTests.swift; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 		7CFB46E42BEE45AB00F53B99 /* SyncUps */ = {
 			isa = PBXGroup;
 			children = (
-				7CFB46E72BEE45AB00F53B99 /* ContentView.swift */,
 				7CFB47122BEE52C500F53B99 /* Models.swift */,
 				7CFB471D2BEE6E8700F53B99 /* SyncUpForm.swift */,
 				7CFB46E52BEE45AB00F53B99 /* SyncUpsApp.swift */,
@@ -284,7 +281,6 @@
 				7CFB47132BEE52C500F53B99 /* Models.swift in Sources */,
 				7CFB471E2BEE6E8700F53B99 /* SyncUpForm.swift in Sources */,
 				7CFB47182BEE5A6700F53B99 /* SyncUpsList.swift in Sources */,
-				7CFB46E82BEE45AB00F53B99 /* ContentView.swift in Sources */,
 				7CFB46E62BEE45AB00F53B99 /* SyncUpsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
